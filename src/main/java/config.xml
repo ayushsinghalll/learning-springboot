@@ -38,5 +38,30 @@
             </set>
         </property>
     </bean>
-
+    <bean name="customer" class="org.example.Customer">
+        <property name="id">
+            <value>45</value>
+        </property>
+        <property name="products">
+            <map>
+                <entry key="100" value="Iphone"/>
+                <entry key="200" value="Samsung"/>
+            </map>
+        </property>
+    </bean>
+    <bean  name="language" class="org.example.Language">
+        <property name="language">
+            <props>
+                <prop key="USA">English</prop>
+                <prop key="INDIA">Hindi</prop>
+            </props>
+        </property>
+    </bean>
+    <bean name="score" class="org.example.Scores" p:chemistry="14" p:maths="45" p:physics="478"/>
+    <bean name="student" class="org.example.Student">
+        <property name="scores" ref="score"/>
+    </bean>
+    <bean name="student1" class="org.example.Student" p:scores-ref="score"/>
+    <bean name="cart" class="org.example.Cart" p:name="Laptop" p:id="456" p:price="600000" p:quantity="1"/>
+    <bean name="shopping" class="org.example.Shopping" p:cart-ref="cart"/>
 </beans>
