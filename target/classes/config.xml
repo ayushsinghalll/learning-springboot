@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="emp" class="org.example.Employee">
+        <property name="id">
+            <value>20</value>
+        </property>
+        <property name="name">
+            <value>Ayush</value>
+        </property>
+    </bean>
+    <bean name="emp1" class="org.example.Employee"
+    p:id="20" p:name="Ayush"  />
+    <bean name="hospital" class="org.example.Hospital">
+        <property name="name" value="Global Hospital"/>
+        <property name="department">
+            <list>
+                <value>Office</value>
+                <value>Patient</value>
+                <value>Out Patient</value>
+            </list>
+        </property>
+    </bean>
+    <bean name="carDealer" class="org.example.CarDealer">
+        <property name="name">
+            <value>Mathura</value>
+        </property>
+        <property name="models">
+            <set>
+                <value>Honda</value>
+                <value>SUV</value>
+                <value>Range Rover</value>
+            </set>
+        </property>
+    </bean>
+
+</beans>
