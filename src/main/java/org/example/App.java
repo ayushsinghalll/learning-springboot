@@ -45,6 +45,10 @@ public class App
         Shopping shopping = (Shopping) ctx.getBean("shopping");
         System.out.println(shopping);
 
+        //Patint
+        Patient patient = (Patient) ctx.getBean("patient");
+        System.out.println(patient);
+        ctx.registerShutdownHook();
         //close Bean
         ctx.close();
 

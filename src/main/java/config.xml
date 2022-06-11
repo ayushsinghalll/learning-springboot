@@ -64,4 +64,5 @@
     <bean name="student1" class="org.example.Student" p:scores-ref="score"/>
     <bean name="cart" class="org.example.Cart" p:name="Laptop" p:id="456" p:price="600000" p:quantity="1"/>
     <bean name="shopping" class="org.example.Shopping" p:cart-ref="cart"/>
+    <bean class="org.example.Patient" name="patient" p:id="45" init-method="hi" destroy-method="destroy"/>
 </beans>
